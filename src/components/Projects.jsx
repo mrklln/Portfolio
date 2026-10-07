@@ -39,7 +39,7 @@ function Projects() {
   }
 
   const arrowClass =
-    'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/80 border border-white/10 text-white text-xl items-center justify-center hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600 transition-colors'
+    'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white text-xl items-center justify-center hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600 transition-colors'
 
   return (
     <section className="py-4">
@@ -63,10 +63,10 @@ function Projects() {
       {repos.length > 0 && (
         <Reveal>
           <div className="relative">
-            <button onClick={() => scroll(-1)} aria-label="Scroll left" className={`${arrowClass} md:-left-5`}>
+            <button onClick={() => scroll(-1)} aria-label="Scroll left" className={`${arrowClass} md:-left-1`}>
               ‹
             </button>
-            <button onClick={() => scroll(1)} aria-label="Scroll right" className={`${arrowClass} md:-right-5`}>
+            <button onClick={() => scroll(1)} aria-label="Scroll right" className={`${arrowClass} md:-right-1`}>
               ›
             </button>
 
