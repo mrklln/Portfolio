@@ -1,5 +1,4 @@
 import { FaDownload, FaGraduationCap, FaBriefcase } from 'react-icons/fa'
-import resumePdf from '../assets/Resume.pdf'
 
 const education = [
   {
@@ -94,7 +93,7 @@ function Resume() {
         </div>
       </div>
       <div className="text-center mt-10">
-        <a href={resumePdf} download="Mark-Allen-Salomon-Resume.pdf" 
+        <a href={`${import.meta.env.BASE_URL}Mark-Allen-Salomon-Resume.pdf`} download="Mark-Allen-Salomon-Resume.pdf"
         className="group inline-flex items-center gap-4 bg-yellow-600 text-gray-900 font-semibold pl-6 pr-2 py-2 rounded-full hover:bg-yellow-700 transition-colors">
           Download CV
           <span className="w-10 h-10 rounded-full bg-white text-yellow-600 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-0.5">
