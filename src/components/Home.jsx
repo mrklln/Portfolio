@@ -37,7 +37,7 @@ function Home() {
             </div>
 
             <div className="relative shrink-0">
-              <div className="absolute inset-0 -z-10 rounded-full bg-yellow-100/20 blur-3xl" />
+              <div className="absolute inset-0 -z-10 rounded-full blur-3xl" />
               <img src={home} alt="Mark Allen Salomon" className="w-48 sm:w-64 lg:w-72 h-auto drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_80%,transparent)]"/>
             </div>
           </div>
