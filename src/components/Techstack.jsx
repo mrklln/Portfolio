@@ -10,8 +10,8 @@ const skills = [
   { name: 'React JS', icon: FaReact, color: '#61DAFB' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38BDF8' },
   { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
-  { name: 'GitHub', icon: FaGithub, color: '#FFFFFF' },
-  { name: 'Vercel', icon: SiVercel, color: '#FFFFFF' },
+  { name: 'GitHub', icon: FaGithub, color: 'var(--color-white)' },
+  { name: 'Vercel', icon: SiVercel, color: 'var(--color-white)' },
   { name: 'VS Code', icon: FaCode, color: '#2F9BE8' },
   { name: 'Java', icon: FaJava, color: '#ED8B00' },
 ]
@@ -23,13 +23,13 @@ function Skills() {
         Tech <span className="text-yellow-600">Stack</span>
       </h2>
 
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-6">
+      <div className="bg-white/5 border border-white/10 [html.light_&]:border-white/25 rounded-2xl p-4 sm:p-6">
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => {
             const Icon = skill.icon
             return (
               <Reveal key={skill.name} delay={index * 80} className="w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.7rem)] lg:w-[calc(20%-0.8rem)]">
-                <div className="group h-full bg-black/60 border border-white/5 rounded-xl py-6 flex flex-col items-center gap-3 hover:border-yellow-600/60 hover:-translate-y-1 transition-all duration-300">
+                <div className="group h-full bg-black/60 border border-white/5 [html.light_&]:border-white/20 [html.light_&]:shadow-sm rounded-xl py-6 flex flex-col items-center gap-3 hover:border-yellow-600/60 hover:-translate-y-1 transition-all duration-300">
                   <Icon size={36} style={{ color: skill.color }} className="transition-transform duration-300 group-hover:scale-110"/>
                   <span className="text-sm font-medium text-gray-200">
                     {skill.name}

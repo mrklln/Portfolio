@@ -17,7 +17,7 @@ const sectionClass =
 const innerClass = 'w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'
 
 const dots =
-  'bg-[radial-gradient(circle,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px]'
+  'bg-[radial-gradient(circle,color-mix(in_srgb,var(--color-white)_20%,transparent)_1px,transparent_1px)] [background-size:24px_24px]'
 
 function App() {
   const [active, setActive] = useState('home')

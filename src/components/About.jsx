@@ -17,6 +17,19 @@ function About() {
           Outside of coding, I enjoy gaming, reading manga/manhwa, and listening to music.
           I'm looking for opportunities to learn, build real projects, and grow as a web developer.
         </p>
+
+        <div className="mt-10">
+        <h3 className="text-xl font-semibold text-white mb-4 text-center">Skills</h3>
+        <div className="flex flex-wrap justify-center gap-2">
+          {skills.map((skills) => (
+            <span key={skills}
+              className="bg-yellow-600/10 text-yellow-500 border border-yellow-600/30 px-3 py-1 rounded-full text-sm  hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600
+              hover:-translate-y-1 hover:scale-110">
+              {skills}
+            </span>
+          ))}
+        </div>
+      </div>
       </section>
     </div>
   )

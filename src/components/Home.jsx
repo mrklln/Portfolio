@@ -5,11 +5,11 @@ import home from '../assets/home.png'
 function Home() {
   return (
     <section id="home" className="relative min-h-screen  scroll-mt-16 flex items-center overflow-hidden">
-      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover motion-reduce:hidden">
+      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover motion-reduce:hidden [html.light_&]:invert [html.light_&]:opacity-75">
         <source src={bg} type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/60 [html.light_&]:bg-black/20" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
@@ -38,7 +38,7 @@ function Home() {
 
             <div className="relative shrink-0">
               <div className="absolute inset-0 -z-10 rounded-full blur-3xl" />
-              <img src={home} alt="Mark Allen Salomon" className="w-48 sm:w-64 lg:w-72 h-auto drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_80%,transparent)]"/>
+              <img src={home} alt="Mark Allen Salomon" className="w-48 sm:w-64 lg:w-72 h-auto drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_90%,transparent)]"/>
             </div>
           </div>
         </Reveal>

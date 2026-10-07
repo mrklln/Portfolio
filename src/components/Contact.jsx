@@ -17,7 +17,7 @@ const contacts = [
     icon: FaFacebook,
   },
 ]
-const inputClass = 'w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-yellow-600 transition-colors'
+const inputClass = 'w-full bg-black/40 border border-white/10 [html.light_&]:border-white/30 rounded-lg px-4 py-3 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-yellow-600 transition-colors'
 
 
 function Contact() {
@@ -32,7 +32,6 @@ function Contact() {
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`
   }
 
-
   return (
     <section className="py-4">
       <p className="text-yellow-600 font-semibold text-center">Get in touch</p>
@@ -44,19 +43,12 @@ function Contact() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-
-
-
-
-        
         <div className="space-y-3">
           {contacts.map((item) => {
             const Icon = item.icon
             return (
               <a key={item.label} href={item.href} target={item.href.startsWith('mailto') ? undefined : '_blank'} rel="noreferrer"
-                className="group flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4 hover:border-yellow-600/60 hover:-translate-y-0.5 transition-all duration-300">
+                className="group flex items-center gap-4 bg-white/5 border border-white/10 [html.light_&]:border-white/25 [html.light_&]:shadow-sm rounded-xl p-4 hover:border-yellow-600/60 hover:-translate-y-0.5 transition-all duration-300">
                 <span className="w-11 h-11 rounded-full bg-yellow-600/10 text-yellow-500 flex items-center justify-center shrink-0 group-hover:bg-yellow-600 group-hover:text-gray-900 transition-colors">
                   <Icon size={20} />
                 </span>
@@ -70,7 +62,7 @@ function Contact() {
             )
           })}
 
-          <div className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-4">
+          <div className="flex items-center gap-4 bg-white/5 border border-white/10 [html.light_&]:border-white/25 [html.light_&]:shadow-sm rounded-xl p-4">
             <span className="w-11 h-11 rounded-full bg-yellow-600/10 text-yellow-500 flex items-center justify-center shrink-0">
               <FaMapMarkerAlt size={20} />
             </span>
@@ -83,7 +75,7 @@ function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
+        <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 [html.light_&]:border-white/25 [html.light_&]:shadow-sm rounded-2xl p-6 space-y-4">
           <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your name" required className={inputClass}/>
           <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Your email" required className={inputClass}/>
           <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your message" rows={5} required className={`${inputClass} resize-none`}/>

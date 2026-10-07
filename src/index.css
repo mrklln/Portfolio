@@ -3,3 +3,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+html.light {
+  color-scheme: light;
+  --color-white: #18181b;
+  --color-black: #ffffff;
+  --color-zinc-900: #f4f4f5;
+  --color-neutral-950: #ffffff;
+  --color-gray-200: #27272a;
+  --color-gray-300: #3f3f46;
+  --color-gray-400: #52525b;
+  --color-gray-500: #71717a;
+  --color-yellow-500: #a16207;
+}

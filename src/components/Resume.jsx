@@ -36,15 +36,13 @@ const experience = [
   },
 ]
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'React JS', 'Tailwind CSS', 'MySQL', 'Java', 'GitHub', 'Vercel']
-
 function Timeline({ items }) {
   return (
-    <div className="relative border-l border-white/10 ml-3 space-y-6">
+    <div className="relative border-l border-white/10 [html.light_&]:border-white/30 ml-3 space-y-6">
       {items.map((item) => (
         <div key={item.title} className="relative pl-6">
           <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-yellow-600 ring-4 ring-black" />
-          <div className="bg-white/5 border border-white/10 rounded-xl p-4 hover:border-yellow-600/60 transition-colors duration-300">
+          <div className="bg-white/5 border border-white/10 [html.light_&]:border-white/25 [html.light_&]:shadow-sm rounded-xl p-4 hover:border-yellow-600/60 transition-colors duration-300">
             <p className="text-xs text-yellow-600 font-semibold">{item.period}</p>
             <h4 className="text-white font-semibold mt-1">{item.title}</h4>
             <p className="text-gray-300 text-sm">{item.place}</p>
@@ -80,18 +78,7 @@ function Resume() {
         </div>
       </div>
 
-      <div className="mt-10">
-        <h3 className="text-xl font-semibold text-white mb-4 text-center">Skills</h3>
-        <div className="flex flex-wrap justify-center gap-2">
-          {skills.map((skill) => (
-            <span key={skill}
-              className="bg-yellow-600/10 text-yellow-500 border border-yellow-600/30 px-3 py-1 rounded-full text-sm  hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600
-              hover:-translate-y-1 hover:scale-110">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
+      
       <div className="text-center mt-10">
         <a href={`${import.meta.env.BASE_URL}Mark-Allen-Salomon-Resume.pdf`} download="Mark-Allen-Salomon-Resume.pdf"
         className="group inline-flex items-center gap-4 bg-yellow-600 text-gray-900 font-semibold pl-6 pr-2 py-2 rounded-full hover:bg-yellow-700 transition-colors">

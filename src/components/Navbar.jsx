@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from '../assets/Logo.png'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { id: 'home', label: 'Home' },
@@ -25,19 +26,22 @@ function Navbar({ active }) {
           <img src={logo} alt="Logo" className="h-20 w-18 object-cover" />
         </a>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl"aria-label="Toggle menu">
-          {open ? '✕' : '☰'}
-        </button>
+        <div className="flex items-center gap-3">
+          <ul className="hidden md:flex gap-2">
+            {links.map((link) => (
+              <li key={link.id}>
+                <a href={`#${link.id}`} className={linkClass(link.id)}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <ul className="hidden md:flex gap-2">
-          {links.map((link) => (
-            <li key={link.id}>
-              <a href={`#${link.id}`} className={linkClass(link.id)}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ThemeToggle />
+          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl"aria-label="Toggle menu">
+            {open ? '✕' : '☰'}
+          </button>
+        </div>
       </div>
 
       {open && (

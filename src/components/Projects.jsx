@@ -39,7 +39,7 @@ function Projects() {
   }
 
   const arrowClass =
-    'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/40 border border-white/10 text-white text-xl items-center justify-center hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600 transition-colors'
+    'hidden md:flex absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-black/40 border border-white/10 [html.light_&]:bg-black/90 [html.light_&]:border-white/25 [html.light_&]:shadow-md text-white text-xl items-center justify-center hover:bg-yellow-600 hover:text-gray-900 hover:border-yellow-600 transition-colors'
 
   return (
     <section className="py-4">
@@ -73,7 +73,7 @@ function Projects() {
             <div ref={scrollRef} className="flex gap-4 overflow-x-auto snap-x snap-mandatory py-3 px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {repos.map((repo) => (
                 <div key={repo.id} className="snap-start shrink-0 w-72 sm:w-80 bg-white/5 border 
-                border-white/10 rounded-2xl p-5 flex flex-col hover:border-yellow-600/60 hover:-translate-y-1 
+                border-white/10 [html.light_&]:border-white/25 [html.light_&]:shadow-sm rounded-2xl p-5 flex flex-col hover:border-yellow-600/60 hover:-translate-y-1 
                 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white break-words">
                     {repo.name.replace(/[-_]/g, ' ')}
