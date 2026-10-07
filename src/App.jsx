@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
-import Skills from './components/Skills'
+import Techstack from './components/Techstack'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Reveal from './components/Reveal'
+import Resume from './components/Resume'
 
-const sectionIds = ['home', 'about', 'skills', 'projects', 'contact']
+const sectionIds = ['home', 'about', 'resume', 'techstack', 'projects', 'contact']
 
 const sectionClass =
   'min-h-[calc(100vh-4rem)] scroll-mt-16 flex flex-col justify-center py-10'
@@ -21,7 +22,6 @@ const dots =
 function App() {
   const [active, setActive] = useState('home')
 
-  // Highlights the navbar button for the section you're viewing
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,8 +51,11 @@ function App() {
             <Reveal><About /></Reveal>
           </div>
         </div>
-        <div id="skills" className={sectionClass}>
-          <Reveal><Skills /></Reveal>
+        <div id="resume" className={sectionClass}>
+          <Reveal><Resume /></Reveal>
+        </div>
+        <div id="techstack" className={sectionClass}>
+          <Reveal><Techstack /></Reveal>
         </div>
         <div id="projects" className={sectionClass}>
           <Reveal><Projects /></Reveal>

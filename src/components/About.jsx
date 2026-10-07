@@ -13,17 +13,11 @@ function About() {
           I'm a student studying Information Technology at Cavite State University - Tanza Campus. I enjoy
           building simple, useful web apps and I'm always learning new things.
         </p>
-
-        <h3 className="text-xl text-white font-semibold mt-8 mb-3">Skills</h3>
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <span key={skill} className="bg-blue-100 text-yellow-700 font-bold px-3 py-1 rounded-full text-sm">
-              {skill}
-            </span>
-          ))}
-        </div>
+        <p className="text-white max-w-2xl">
+          Outside of coding, I enjoy gaming, reading manga/manhwa, and listening to music.
+          I'm looking for opportunities to learn, build real projects, and grow as a web developer.
+        </p>
       </section>
-      
     </div>
   )
 }

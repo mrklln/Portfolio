@@ -4,9 +4,10 @@ import logo from '../assets/Logo.png'
 const links = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Tech Stack' },
+  { id: 'resume', label: 'Resume'},
+  { id: 'techstack', label: 'Tech Stack' },
   { id: 'projects', label: 'Projects' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'contact', label: 'Contact' }
 ]
 
 function Navbar({ active }) {

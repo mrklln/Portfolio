@@ -3,9 +3,10 @@ import { FaGithub, FaFacebook } from 'react-icons/fa'
 const quickLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Resume', href: '#resume'},
   { label: 'Tech Stack', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#contact' }
 ]
 
 const socials = [
