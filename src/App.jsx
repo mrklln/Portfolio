@@ -10,16 +10,13 @@ import Reveal from './components/Reveal'
 
 const sectionIds = ['home', 'about', 'skills', 'projects', 'contact']
 
-// Shared classes: each section fills the screen below the navbar
 const sectionClass =
   'min-h-[calc(100vh-4rem)] scroll-mt-16 flex flex-col justify-center py-10'
 
 const innerClass = 'w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'
 
-
 const dots =
   'bg-[radial-gradient(circle,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px]'
-
 
 function App() {
   const [active, setActive] = useState('home')
