@@ -1,16 +1,97 @@
-# React + Vite
+# Mark Allen C. Salomon | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive personal portfolio website showcasing my background, skills, and projects. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vercel:** https://salomon-my-portfolio.vercel.app
+- **GitHub Pages:** https://mrklln.github.io/Portfolio/
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I'm a 3rd year BS Information Technology student at Cavite State University - Tanza Campus. This portfolio presents my education, experience, tech stack, and the projects I've built.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive layout that works on mobile, tablet, and desktop
+- Sections for Home, About, Resume, Tech Stack, Projects, and Contact
+- Resume timeline for education and experience, with a skills list
+- Downloadable CV
+- Projects pulled live from my GitHub
+- Scroll reveal animations and hover effects
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- Hosted on [Vercel](https://vercel.com/) and [GitHub Pages](https://pages.github.com/)
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 18 or newer
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/mrklln/Portfolio.git
+
+# Go into the project folder
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Then open the local URL shown in the terminal (usually `http://localhost:5173`).
+
+### Build for production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+Portfolio
+├── .github/workflows   # GitHub Pages deploy workflow
+├── public              # Static files (favicon, resume PDF)
+├── src
+│   ├── assets          # Images and other imported assets
+│   ├── components      # About, Contact, Footer, Home, Navbar,
+│   │                   # Projects, Resume, Reveal, Techstack
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+## Deployment
+
+One `git push` to `main` updates both sites.
+
+- **Vercel** rebuilds automatically on every push using the default build (`base: '/'`).
+- **GitHub Pages** is deployed by a GitHub Actions workflow (`.github/workflows/deploy.yml`) that runs `vite build --mode ghpages`, which sets `base: '/Portfolio/'` in `vite.config.js`.
+
+For the GitHub Pages deploy to work, set **Settings → Pages → Source** to **GitHub Actions** in the repository.
+
+## Contact
+
+- GitHub: [@mrklln](https://github.com/mrklln)
+
+---
+
+D
